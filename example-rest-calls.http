@@ -1,0 +1,22 @@
+@APP_HOSTNAME = xxx
+@APP_URL = http://{{APP_HOSTNAME}}:3000
+
+@SOME_ID = xxx
+
+### List cards
+
+GET {{APP_URL}}/api/cards
+
+### Get card
+
+GET {{APP_URL}}/api/cards/{{SOME_ID}}
+
+### Create card
+
+POST {{APP_URL}}/api/cards
+Content-Type: application/json
+
+{
+    "title": "#42",
+    "priority": "high"
+}
